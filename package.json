@@ -1,0 +1,11 @@
+{
+  "name": "node-review",
+  "version": "0.0.1",
+  "description": "reviewing node again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Daniel <davidedaniel@gmail.com> (http://davidedaniel.github.io)",
+  "license": "ISC"
+}
