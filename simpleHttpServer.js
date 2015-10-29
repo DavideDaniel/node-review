@@ -6,6 +6,6 @@ http
     res.writeHead(200, {
       'Content-type': 'text/html'
     });
-    res.end('<h1>Hello NodeJS</h1>');
+    res.end('<h1>Hey you...</h1>');
   })
   .listen(3000, () => console.log('Server running on port 3000'));
