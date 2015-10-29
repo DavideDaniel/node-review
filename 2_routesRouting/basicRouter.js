@@ -16,6 +16,13 @@ let routes = {
         'Content-type': 'text/html'
       });
       res.end('<h1>About...</h1>');
+    },
+    '/api/getinfo': (req, res) => {
+      // ideal for SPA / Angular etc. - fetch data from db & respond as JSON
+      res.writeHead(200, {
+        'Content-type': 'application/json'
+      });
+      res.end(JSON.stringify(req.queryParams));
     }
 
   },
@@ -33,6 +40,7 @@ function router(req, res) {
   let resolveRoute = routes[req.method][baseURI.pathname];
 
   if (resolveRoute != undefined) {
+    req.queryParams = baseURI.query;
     resolveRoute(req, res);
   } else {
     routes['NA'](req, res);
